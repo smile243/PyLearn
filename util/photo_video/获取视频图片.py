@@ -73,7 +73,7 @@ def get():
         os.makedirs(save_path2, exist_ok=True)
         for search in searchs:    
             try:
-                biying = f"https://cn.bing.com/images/search?q={search}&go=Search&qs=ds&form=QBIR&first=1"
+                biying = f"https://cn.bing.com/images/search?q={search}"
                 page.get(biying)
                 hrefs = page.eles('tag:a@@class=iusc')
                 for i, href in enumerate(hrefs, 1):
@@ -86,6 +86,7 @@ def get():
             except Exception as e:
                 print(f"处理搜索词 {search} 时出错: {str(e)}")
                 continue
+    browser.quit()        
 
 if __name__ == "__main__":
     print_usage()
@@ -95,3 +96,4 @@ if __name__ == "__main__":
         exit()
     get()
     print("\n获取完成")
+    input("\n按任意键退出...")
