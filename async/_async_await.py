@@ -27,12 +27,12 @@ async def visit_url(url, response_time):
 async def run_task():
     """收集子任务"""
 
-    task_1 = visit_url('https://XXX1.com', 2)
-    task_2 = visit_url('https://XXX2.com', 3)
+    task_1 = visit_url('https://www.xxx.com', 2)
+    task_2 = visit_url('https://www.baidu.com', 1)
     tasks = [task_1, task_2]
     await asyncio.gather(*tasks)
 
 
 start_time = time.perf_counter()
 asyncio.run(run_task())
-print(f"耗时: {time.perf_counter() - start_time}s")
+print(f"耗时: {int(time.perf_counter() - start_time)}秒")
