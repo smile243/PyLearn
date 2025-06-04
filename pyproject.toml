@@ -6,3 +6,7 @@ requires-python = ">=3.10,<4.0"
 dependencies = [
     "fastapi[standard]<1.0.0,>=0.114.2",
 ]
+
+[dependency-groups]
+dev = []
+production = []
