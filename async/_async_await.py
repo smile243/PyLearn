@@ -12,7 +12,7 @@ trio 第三方库用法
 协程的主要应用场景是 IO 密集型任务，总结几个常见的使用场景：
 网络请求，比如爬虫，大量使用 aiohttp
 文件读取， aiofile
-web 框架， aiohttp， fastapi
+web 框架， aiohttp，fastapi
 数据库查询， asyncpg, databases
 """
 
